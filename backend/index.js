@@ -29,7 +29,7 @@ app.use(express.json());
 const dbURI = process.env.MONGODB_URI;
 
 // Connect to MongoDB
-mongoose.connect(dbURI, {
+mongoose.connect('mongodb+srv://kushaljoshi304:yyhCVOExRbAPVCR7@cluster0.jd1bdzt.mongodb.net/Notepad', {
 
   useNewUrlParser: true,
   useUnifiedTopology: true,
