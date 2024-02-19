@@ -53,24 +53,7 @@ function Navbar(props) {
           <li className="nav-item">
             <Link className="nav-link active" aria-current="page" to="/insight">Insight</Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="/summary">Summary</Link>
-          </li>
-
-          <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle active" to="/general" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  News
-                </Link>
-                <ul className={`dropdown-menu `} >
-                  <li className="item"><Link className="dropdown-item link" aria-current="page" to="/general">General</Link></li>
-                  <li className='item'><Link className="dropdown-item link" aria-current="page" to="/technology">Technology</Link></li>
-                  <li className='item'><Link className="dropdown-item link" aria-current="page" to="/sports">Sports</Link></li>
-                  <li className='item'><Link className="dropdown-item link" aria-current="page" to="/business"> Business</Link></li>
-                  <li className='item'><Link className="dropdown-item link" aria-current="page" to="/entertainment">Entertainment</Link></li>
-                  <li className='item'><Link className="dropdown-item link" aria-current="page" to="/health">Health</Link></li>
-                  <li className='item'><Link className="dropdown-item link" aria-current="page" to="/science">Science</Link></li>
-                </ul>
-          </li>
+          
           <li className="nav-item dropdown">
                 <Link className="nav-link dropdown-toggle active" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Notes

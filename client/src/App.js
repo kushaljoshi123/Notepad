@@ -5,7 +5,6 @@ import TextArea from './notepad/textarea';
 import About from './about/about';
 import Navbar from './navbar/navbar';
 import Alert from '../src/components/alert';
-import News from './news/news';
 import Insight from './analysis/insight';
 import Login from './user/login';
 import Register from './user/registers';
@@ -16,9 +15,6 @@ import Category from './category/category';
 function App(props) {
   const [mode,setMode]=useState('light');
   const [alert,setAlert]=useState(null);
-  
-    const api = process.env.REACT_APP_NEWS_API;
-    // const api="3e69e2dc8d9241889ee2d1372eafa6e7";
 
   // Default background color based on the mode
   const backgroundColor = mode === 'light' ? '#D2B48C' : '#0A3A5E';
@@ -62,16 +58,6 @@ function App(props) {
     {renderNavbar()}
     <Alert alert={alert}/>
       <Routes>
-
-       
-      `{/* News Path */}
-        <Route exact path='/general' element={<News key="general" heading="General" apiKey={api}  pageSize={5} country="in" category="general" mode={mode} />}/>
-        <Route exact path='/business' element={<News key="business" heading="Business" apiKey={api}  pageSize={5} country="in" category="business" mode={mode} />}/>
-        <Route exact path='/entertainment' element={<News key="entertainment" apiKey={api}  heading="Entertainment" pageSize={5} country="in" category="entertainment" mode={mode} />}/>
-        <Route exact path='/health' element={<News key="health" heading="Health" apiKey={api}  pageSize={5} country="in" category="health" mode={mode} />}/>
-        <Route exact path='/science' element={<News key="science" heading="Science" apiKey={api}  pageSize={5} country="in" category="science" mode={mode} />}/>
-        <Route exact path='/sports' element={<News key="sports" heading="Sports" apiKey={api}  pageSize={5} country="in" category="sports" mode={mode} />}/>
-        <Route exact path='/technology' element={<News key="technology" apiKey={api} heading="Technology"  pageSize={5} country="in" category="technology" mode={mode} />}/>
         
         {/* NotePad Path */}
         <Route exact path='/insight' element={<Insight mode={mode} />}/>

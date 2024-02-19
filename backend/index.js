@@ -1,4 +1,5 @@
 // backend/server.js
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -23,10 +24,12 @@ const allowedOrigins = [
 app.use(express.json());
 
 // Define database and collection names
-const DB_NAME = 'Notepad';
+// const DB_NAME = 'Notepad';
+
+const dbURI = process.env.MONGODB_URI;
 
 // Connect to MongoDB
-mongoose.connect(`mongodb://localhost:27017/${DB_NAME}`, {
+mongoose.connect(dbURI, {
 
   useNewUrlParser: true,
   useUnifiedTopology: true,
