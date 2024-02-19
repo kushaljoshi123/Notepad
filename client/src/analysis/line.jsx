@@ -23,7 +23,7 @@ function LineChart(props) {
     console.log('Fetching data for user ID:', userId);
 
     // Fetch data from your server using the userId
-    fetch(`https://text-util-five.vercel.app/api/fetch-notes/${userId}`)
+    fetch(`https://notepad-one-fawn.vercel.app/api/fetch-notes/${userId}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

@@ -21,7 +21,7 @@ const BookmarkPage = (props) => {
       return;
     }
     try {
-      const response = await axios.get(`https://text-util-five.vercel.app/api/bookmarked-notes/${userId}`);
+      const response = await axios.get(`https://notepad-one-fawn.vercel.app/api/bookmarked-notes/${userId}`);
       setBookmarkedNotes(response.data.bookmarkedNotes);
       // Initialize expanded state for each note
       setExpandedNotes(new Array(response.data.bookmarkedNotes.length).fill(false));

@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
     'http://localhost:3000',
+    'https://notepad-eqiz.vercel.app'
   // Replace with your Vercel frontend URL
   ];
   

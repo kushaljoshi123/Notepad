@@ -23,7 +23,7 @@ function Category(props) {
 
     try {
       // Make a GET request to fetch notes for a specific category
-      const response = await axios.get(`https://text-util-five.vercel.app/api/category/${userId}?category=${category}`);
+      const response = await axios.get(`https://notepad-one-fawn.vercel.app/api/category/${userId}?category=${category}`);
       setNotes(response.data.notes);
     } catch (error) {
       console.error('Error fetching notes by category:', error);

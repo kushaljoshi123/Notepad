@@ -6,7 +6,7 @@ import { FaTrash, FaShareSquare, FaVolumeUp,FaFilePdf } from 'react-icons/fa';
 import BookmarkIcon from './bookmark';
 import SearchBar from './search';
 // import Quil from '../components/quil';
-// https://text-util-five.vercel.app
+// https://notepad-one-fawn.vercel.app
 
 function Textarea(props) {
   const [text, setText] = useState('');
@@ -51,7 +51,7 @@ function Textarea(props) {
     }
   
     try {
-      const response = await axios.get(`https://text-util-five.vercel.app/api/fetch-notes/${userId}`);
+      const response = await axios.get(`https://notepad-one-fawn.vercel.app/api/fetch-notes/${userId}`);
       const notes = response.data.notes;
   
       if (notes && Array.isArray(notes)) {
@@ -110,7 +110,7 @@ const searchNotes = async () => {
     loadNotes(); // Load all notes for the user if the search term is empty
   } else {
     try {
-      const response = await axios.get(`https://text-util-five.vercel.app/api/search/${userId}?searchTerm=${searchTerm}`);
+      const response = await axios.get(`https://notepad-one-fawn.vercel.app/api/search/${userId}?searchTerm=${searchTerm}`);
       const sortedResults = response.data.notes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
       setSearchResults(sortedResults);
     } catch (error) {
@@ -128,7 +128,7 @@ const searchNotes = async () => {
         return;
       }
       // Save the note to the backend
-      const response = await axios.post('https://text-util-five.vercel.app/api/notes', { content: text, category: category, userId : userId });
+      const response = await axios.post('https://notepad-one-fawn.vercel.app/api/notes', { content: text, category: category, userId : userId });
       if (response.data.success) {
         props.showAlert('Note saved successfully!', 'success');
         loadNotes(); // Refresh the notes list after saving
@@ -167,7 +167,7 @@ const searchNotes = async () => {
   const handleDeleteNote = async (noteId) => {
     try {
       // Make an API call to delete the note by ID
-      await axios.delete(`https://text-util-five.vercel.app/api/notes/${noteId}`);
+      await axios.delete(`https://notepad-one-fawn.vercel.app/api/notes/${noteId}`);
       props.showAlert('Note deleted successfully!', 'success');
       
       // Reload the notes list after deletion

@@ -23,7 +23,7 @@ function BookmarkGraph() {
 
     // Fetch bookmarked notes from your server using the userId
     axios
-      .get(`https://text-util-five.vercel.app/api/bookmarked-notes/${userId}`)
+      .get(`https://notepad-one-fawn.vercel.app/api/bookmarked-notes/${userId}`)
       .then((response) => {
         const bookmarkedNotes = response.data.bookmarkedNotes;
 

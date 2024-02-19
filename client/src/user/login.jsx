@@ -17,7 +17,7 @@ function LoginForm() {
     }
 
     try {
-      const response = await axios.post('https://text-util-five.vercel.app/api/login', { email, password });
+      const response = await axios.post('https://notepad-one-fawn.vercel.app/api/login', { email, password });
       const { token } = response.data;
   
       if (response.status === 200) {

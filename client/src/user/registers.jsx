@@ -25,7 +25,7 @@ const Registration = () => {
     }
 
     try {
-      const response = await axios.post('https://text-util-five.vercel.app/registers', userData);
+      const response = await axios.post('https://notepad-one-fawn.vercel.app/registers', userData);
 
       if (response.status === 201) {
         setResponse('Registration Successful!');

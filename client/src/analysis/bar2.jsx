@@ -23,7 +23,7 @@ function BarChart() {
 
     // Fetch data from your server using the userId
     axios
-      .get(`https://text-util-five.vercel.app/api/fetch-notes/${userId}`)
+      .get(`https://notepad-one-fawn.vercel.app/api/fetch-notes/${userId}`)
       .then((response) => {
         const notesData = response.data.notes; // Assuming data is an array of objects with 'category' and 'characterCount' properties
 
